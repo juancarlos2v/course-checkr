@@ -1,23 +1,27 @@
+const st = [];
+
 const getAll = async () => {
   const response = await fetch("http://localhost:3001/students");
-  const student = await response.json();
-
-  return console.log(student);
+  const students = await response.json();
+  //console.log(students);
+  return students;
 };
 
 const getStudent = async (id) => {
   const response = await fetch(`http://localhost:3001/students/${id}`);
   const student = await response.json();
-  return console.log(student);
+  //console.log(student);
+  return student;
 };
 
 const getSubjectsByStudent = async (id) => {
   const response = await fetch(`http://localhost:3001/students/${id}`);
   const student = await response.json();
-  return console.log(student.subjects);
+  const subjects = await student.subjects;
+  return subjects;
 };
 
-getSubjectsByStudent("95304678");
+//getStudent("95336850");
 
 export default {
   getAll,

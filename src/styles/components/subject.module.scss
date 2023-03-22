@@ -1,0 +1,33 @@
+$aprobada: #0f3759;
+$cursada: #7ba86c;
+$progreso: #fcac11;
+$default: #727e86;
+$text-inactive: #dce3e7;
+
+.aprobada {
+  background-color: $aprobada;
+}
+.cursada {
+  background-color: $cursada;
+}
+
+.default {
+  background-color: $default;
+  color: $text-inactive;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-bottom: 1rem;
+  width: 9rem;
+  justify-content: space-around;
+  background-color: $aprobada;
+  color: white;
+}
+
+.card > div {
+  display: flex;
+  flex-direction: column;
+}

@@ -1,0 +1,70 @@
+{
+  "students": [
+    {
+      "id": "95336850",
+      "name": "Andrea",
+      "subjects": [
+        {
+          "id": 1,
+          "name": "Arquitectura I",
+          "abrv": "A1",
+          "catedra": "Explora",
+          "cursada": true,
+          "final": true
+        },
+        {
+          "id": 2,
+          "name": "Sistema de Respresentacion Geometrica",
+          "abrv": "SRG",
+          "catedra": "Misuraca",
+          "cursada": true,
+          "final": false
+        },
+        {
+          "id": 3,
+          "name": "Arquitectura II",
+          "abrv": "A2",
+          "catedra": "Baliero",
+          "cursada": true,
+          "final": true
+        },
+        {
+          "id": 4,
+          "name": "Instalaciones I",
+          "abrv": "I1",
+          "catedra": "ex-Fama",
+          "cursada": true,
+          "final": false
+        },
+        {
+          "id": 5,
+          "name": "Arquitectura III",
+          "abrv": "A3",
+          "catedra": "baliero",
+          "cursada": false,
+          "final": false
+        }
+      ]
+    },
+    {
+      "id": "95304678",
+      "name": "Julian",
+      "subjects": [
+        {
+          "id": "6",
+          "name": "IPC",
+          "catedra": "unica",
+          "cursada": true,
+          "final": true
+        },
+        {
+          "id": 9,
+          "name": "ICSE",
+          "catedra": "unica",
+          "cursada": true,
+          "final": false
+        }
+      ]
+    }
+  ]
+}
