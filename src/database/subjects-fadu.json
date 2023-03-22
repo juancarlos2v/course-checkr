@@ -1,0 +1,16 @@
+{
+  "subjects": [
+    {
+      "id": 1,
+      "abbreviation": "A1",
+      "name": "Arquitectura I",
+      "enabled": ["IPC", "ICSE", "TD"]
+    },
+    {
+      "id": 2,
+      "name": "Arquitectura III",
+      "abbreviation": "A3",
+      "enabled": ["A1", "A2", "I1"]
+    }
+  ]
+}

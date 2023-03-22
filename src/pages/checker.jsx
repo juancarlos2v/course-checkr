@@ -1,6 +1,5 @@
-import { useEffect, useState } from "react"
+import Subjects from "@container/Subjects"
 import db from "@database"
-import SubjectCard from "@components/SubjectCard"
 
 export const getServerSideProps = async () => {
     const responseStudent = await db.getStudent("95336850");
@@ -16,31 +15,17 @@ export const getServerSideProps = async () => {
 }
 
 
-const Checker = ({ responseStudent, responseSubjects }) => {
-    const [student, setStudent] = useState([]);
-    const [subjects, setSubjects] = useState([]);
+const Checker = ({ responseSubjects }) => {
 
-    useEffect(() => {
-        setStudent(responseStudent);
-        setSubjects(responseSubjects)
-    }, [])
 
     return (
         <>
             <h1>Checkr</h1>
-            <p>Hi {student.id}</p>
+            <p>Hi </p>
             <h3>Materias</h3>
-            <div style={{
-                display: "flex",
-                justifyContent: "space-around",
-                flexWrap: "wrap"
-            }} >
-                {subjects.map((subject, index) =>
-                    <SubjectCard
-                        index={index}
-                        subject={subject} />
-                )}
-            </div>
+            <Subjects
+                responseSubjects={responseSubjects}
+            />
         </>
     )
 }

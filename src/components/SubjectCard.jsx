@@ -5,17 +5,17 @@ const SubjectCard = ({ index, subject }) => {
     return (
         <>
             <div key={index} className={style.card} >
-                <p >{subject.name.length < 20 ? subject.name : subject.abrv} </p>
+                <p >{subject.name.length < 20 ? subject.name : subject.abbreviation} </p>
 
-                {subject.cursada && subject.final ? <p>Aprobada</p> :
+                {subject.done && subject.final ? <p>Aprobada</p> :
                     <div>
                         <button className={
-                            subject.cursada ? style.cursada : style.default}
+                            subject.done ? style.done : style.default}
                             type="button">
                             Cursada
                         </button>
                         <button className={
-                            subject.final ? style.cursada : style.default}
+                            subject.final ? style.done : style.default}
                             type="button">Final
                         </button>
                     </div>
@@ -26,3 +26,6 @@ const SubjectCard = ({ index, subject }) => {
 }
 
 export default SubjectCard;
+
+// para colocar múltiples clases 😄
+// className = {`${styles["more-clickable-area"]} ${styles["navbar-email"]} ${styles.pointer}`}

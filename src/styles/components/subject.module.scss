@@ -1,19 +1,24 @@
-$aprobada: #0f3759;
-$cursada: #7ba86c;
+$completed: #0f3759;
+$done: #7ba86c;
 $progreso: #fcac11;
 $default: #727e86;
 $text-inactive: #dce3e7;
 
-.aprobada {
-  background-color: $aprobada;
-}
-.cursada {
-  background-color: $cursada;
+.done {
+  background-color: $done;
+  &:hover {
+    background-color: $default;
+    color: white;
+  }
 }
 
 .default {
   background-color: $default;
   color: $text-inactive;
+  &:hover {
+    background-color: white;
+    color: black;
+  }
 }
 
 .card {
@@ -23,11 +28,10 @@ $text-inactive: #dce3e7;
   margin-bottom: 1rem;
   width: 9rem;
   justify-content: space-around;
-  background-color: $aprobada;
+  background-color: $completed;
   color: white;
-}
-
-.card > div {
-  display: flex;
-  flex-direction: column;
+  div {
+    display: flex;
+    flex-direction: column;
+  }
 }

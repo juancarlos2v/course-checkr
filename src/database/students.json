@@ -1,0 +1,95 @@
+{
+  "students": [
+    {
+      "id": "95336850",
+      "name": "Andrea",
+      "subjects": [
+        {
+          "id": 1,
+          "name": "Arquitectura I",
+          "abbreviation": "A1",
+          "year": 1,
+          "cathedra": "Explora",
+          "inProgress": false,
+          "done": true,
+          "final": true
+        },
+        {
+          "id": 2,
+          "name": "Sistema de Respresentacion Geometrica",
+          "year": 1,
+          "abbreviation": "SRG",
+          "cathedra": "Misuraca",
+          "inProgress": true,
+          "done": false,
+          "final": false
+        },
+        {
+          "id": 3,
+          "name": "Arquitectura II",
+          "abbreviation": "A2",
+          "year": 2,
+          "cathedra": "Baliero",
+          "inProgress": false,
+          "done": true,
+          "final": true
+        },
+        {
+          "id": 4,
+          "name": "Instalaciones I",
+          "abbreviation": "I1",
+          "year": 2,
+          "cathedra": "ex-Fama",
+          "inProgress": true,
+          "done": false,
+          "final": false
+        },
+        {
+          "id": 5,
+          "name": "Arquitectura III",
+          "abbreviation": "A3",
+          "year": 3,
+          "cathedra": "Baliero",
+          "inProgress": false,
+          "done": false,
+          "final": false
+        }
+      ]
+    },
+    {
+      "id": "95304678",
+      "name": "Julian",
+      "subjects": [
+        {
+          "id": "6",
+          "name": "Introduccion al Pensamiento Cientifico",
+          "abbreviation": "IPC",
+          "cathedra": null,
+          "year": 0,
+          "done": true,
+          "final": true
+        },
+        {
+          "id": 9,
+          "name": "Introduccion al Conocimiento de Sociedad y Estado",
+          "abbreviation": "ICSE",
+          "cathedra": null,
+          "year": 0,
+          "inProgress": false,
+          "done": true,
+          "final": false
+        },
+        {
+          "id": 10,
+          "name": "Taller de Dibujo",
+          "abbreviation": "TD",
+          "cathedra": null,
+          "year": 0,
+          "inProgress": true,
+          "done": false,
+          "final": false
+        }
+      ]
+    }
+  ]
+}
