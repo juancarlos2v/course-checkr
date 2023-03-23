@@ -2,15 +2,38 @@
   "subjects": [
     {
       "id": 1,
-      "abbreviation": "A1",
       "name": "Arquitectura I",
+      "abbreviation": "A1",
+      "level": 1,
       "enabled": ["IPC", "ICSE", "TD"]
     },
     {
-      "id": 2,
+      "id": 3,
+      "name": "Arquitectura II",
+      "abbreviation": "A2",
+      "level": 2,
+      "enabled": ["A1"]
+    },
+    {
+      "id": 5,
       "name": "Arquitectura III",
       "abbreviation": "A3",
+      "level": 3,
       "enabled": ["A1", "A2", "I1"]
+    },
+    {
+      "id": 11,
+      "name": "Arquitectura IV",
+      "abbreviation": "A4",
+      "level": 4,
+      "enabled": ["A1", "A2", "A3", "I1"]
+    },
+    {
+      "id": 13,
+      "name": "Arquitectura V",
+      "abbreviation": "A5",
+      "level": 5,
+      "enabled": ["A1", "A2", "A3", "A4", "I1"]
     }
   ]
 }

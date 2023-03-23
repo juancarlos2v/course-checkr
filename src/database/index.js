@@ -1,5 +1,3 @@
-const st = [];
-
 const getAll = async () => {
   const response = await fetch("http://localhost:3001/students");
   const students = await response.json();
@@ -9,7 +7,6 @@ const getAll = async () => {
 const getStudent = async (id) => {
   const response = await fetch(`http://localhost:3001/students/${id}`);
   const student = await response.json();
-  console.log(student);
   return student;
 };
 
@@ -25,8 +22,6 @@ const getFaduSubjects = async () => {
   const subjects = await response.json();
   return subjects;
 };
-
-getStudent("95336850");
 
 export default {
   getAll,
