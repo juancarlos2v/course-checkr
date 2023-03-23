@@ -1,9 +1,10 @@
-import Layout from "@components/Layout"
-import "../normalize.css"
+import Home from "@components/Layout/Home"
+import "@styles/normalize.css"
+import "@styles/globalStyles.css"
 export default function MyApp({ Component, pageProps }) {
     return (
-        <Layout>
+        <Home>
             <Component {...pageProps} />
-        </Layout>
+        </Home>
     )
 }

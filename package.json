@@ -7,16 +7,20 @@
     "dev": "next",
     "build": "next build",
     "start": "next start",
-    "server": "json-server --watch ./src/api/database/db.json --port 3001",
+    "json-server-students": "json-server --watch ./src/database/students.json --port 3001",
+    "json-server-fadu": "json-server --watch ./src/database/subjects-fadu.json --port 3002",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "bootstrap": "^5.2.3",
     "json-server": "^0.17.2",
     "next": "^13.2.4",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-bootstrap": "^2.7.2",
+    "react-dom": "^18.2.0",
+    "sass": "^1.59.3"
   }
 }
