@@ -1,15 +1,26 @@
 $completed: #0f3759;
 $done: #7ba86c;
-$progreso: #fcac11;
+$inProgress: #fcac11;
 $default: #727e86;
 $text-inactive: #dce3e7;
 
 .done {
   background-color: $done;
   &:hover {
-    background-color: $default;
+    background-color: $inProgress;
     color: white;
   }
+}
+
+.in-progress {
+  background-color: $inProgress;
+  color: black;
+  padding: 1rem;
+}
+
+.no-started {
+  color: $text-inactive;
+  background-color: $default;
 }
 
 .default {
@@ -30,6 +41,7 @@ $text-inactive: #dce3e7;
   justify-content: space-around;
   background-color: $completed;
   color: white;
+  user-select: none;
   div {
     display: flex;
     flex-direction: column;
