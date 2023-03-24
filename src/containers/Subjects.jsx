@@ -1,18 +1,11 @@
-import { useEffect, useState } from "react";
 import SubjectCard from "@components/SubjectCard"
-import useUpdateSubjects from "@hooks/useUpdateSubjects";
+import { useSubjectByLevel } from "@hooks/useSubjectbyLevel";
+
+const Subjects = ({ subjects }) => {
 
 
-const Subjects = ({ subjects, subjectsFadu }) => {
-
-    const totalSubjects = subjects.concat(subjectsFadu)
-
-    const cbc = subjects.filter(subject => subject.level == 0);
-    const first = subjects.filter(subject => subject.level == 1);
-    const second = subjects.filter(subject => subject.level == 2);
-    const third = subjects.filter(subject => subject.level == 3);
-    const fourth = totalSubjects.filter(subject => subject.level == 4)
-    const fifth = totalSubjects.filter(subject => subject.level == 5)
+    const { cbc, first, second, third, fourth, fifth } = useSubjectByLevel({ subjects })
+    const levels = ["CBC", "1er año", "2do año", "3er año", "4to año", "5to año"]
 
     return (
         <div style={{
@@ -21,6 +14,7 @@ const Subjects = ({ subjects, subjectsFadu }) => {
             flexWrap: "wrap"
         }} >
             <div className="container">
+
                 <h3>CBC</h3>
                 {cbc.map((subject, index) => (
                     <SubjectCard index={index} subject={subject} />

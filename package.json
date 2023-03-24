@@ -9,7 +9,6 @@
     "start": "next start",
     "json-server": "concurrently \"npm run json-server:* ",
     "json-server:students": "json-server --watch ./src/database/students.json --port 3001",
-    "json-server:fadu": "json-server --watch ./src/database/subjects-fadu.json --port 3002",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
