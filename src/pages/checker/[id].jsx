@@ -10,7 +10,7 @@ export const getServerSideProps = async (ctx) => {
             student
         }
     }
-}
+};
 
 const Checker = ({ student }) => {
 
