@@ -1,0 +1,49 @@
+$completed: #0f3759;
+$done: #7ba86c;
+$inProgress: #fcac11;
+$default: #727e86;
+$text-inactive: #dce3e7;
+
+.done {
+  background-color: $done;
+  &:hover {
+    background-color: $inProgress;
+    color: white;
+  }
+}
+
+.in-progress {
+  background-color: $inProgress;
+  color: black;
+  padding: 1rem;
+}
+
+.no-started {
+  color: $text-inactive;
+  background-color: $default;
+}
+
+.default {
+  background-color: $default;
+  color: $text-inactive;
+  &:hover {
+    background-color: white;
+    color: black;
+  }
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-bottom: 1rem;
+  width: 9rem;
+  justify-content: space-around;
+  background-color: $completed;
+  color: white;
+  user-select: none;
+  div {
+    display: flex;
+    flex-direction: column;
+  }
+}
