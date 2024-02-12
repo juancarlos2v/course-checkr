@@ -1,10 +1,10 @@
 import SubjectCard from "@components/SubjectCard"
-import { useSubjectByLevel } from "@hooks/useSubjectbyLevel";
+import { useSubjects } from "@hooks/useSubjects";
 
 const Subjects = ({ subjects }) => {
 
 
-    const { cbc, first, second, third, fourth, fifth } = useSubjectByLevel({ subjects })
+    const { cbc, first, second, third, fourth, fifth, approved } = useSubjects({ subjects })
     const levels = ["CBC", "1er año", "2do año", "3er año", "4to año", "5to año"]
 
     return (
@@ -50,6 +50,11 @@ const Subjects = ({ subjects }) => {
                     <SubjectCard index={index} subject={subject} />
                 ))}
             </div>
+            {/* <div>
+                {approved.map((ap) => (
+                    <p>{ap} </p>
+                ))}
+            </div> */}
             <style jsx>{`
                 .container {
                 display: "flex",

@@ -1,28 +1,30 @@
 import Subjects from "@container/Subjects"
-import db from "@database";
+import { subjects } from "@database";
 
 export const getServerSideProps = async (ctx) => {
     const id = ctx.query.id;
-    const student = await db.getStudent(id);
+    //const student = await db.getStudent(id);
+
 
     return {
         props: {
-            student
+            id
         }
     }
 }
 
-const Checker = ({ student }) => {
+const Checker = ({ id }) => {
 
     return (
         <>
             <h1>Checkr</h1>
-            <p>Hi {student.id} </p>
+            <p>Hi {id} </p>
 
             <h3>Materias</h3>
             <Subjects
-                subjects={student.subjects}
+                subjects={subjects}
             />
+
         </>
     )
 }
