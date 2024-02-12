@@ -2,6 +2,8 @@ package com.checkr.demo.models;
 
 import jakarta.persistence.*;
 
+import java.util.Set;
+
 @Entity
 @Table(name = "student")
 public class Student {
@@ -14,14 +16,18 @@ public class Student {
     private String lastName;
     private Integer year;
 
+    @OneToMany(mappedBy="student")
+    private Set<Subject>  subjects;
+
     public Student() {
     }
 
-    public Student(Long id, String name, String lastName, Integer year) {
+    public Student(Long id, String name, String lastName, Integer year, Set<Subject> subjects) {
         this.id = id;
         this.name = name;
         this.lastName = lastName;
         this.year = year;
+        this.subjects=subjects;
     }
 
     public Long getId() {
@@ -54,5 +60,13 @@ public class Student {
 
     public void setYear(Integer year) {
         this.year = year;
+    }
+
+    public Set<Subject> getSubjects() {
+        return subjects;
+    }
+
+    public void setSubjects(Set<Subject> subjects) {
+        this.subjects = subjects;
     }
 }
