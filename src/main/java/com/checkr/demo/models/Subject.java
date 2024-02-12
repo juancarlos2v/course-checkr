@@ -17,11 +17,14 @@ public class Subject {
     private Integer year;
     private Boolean activate;
 
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name="bank_id")
+    private Student student;
 
     public Subject() {
     }
 
-    public Subject(Long id, String name, Integer year, Boolean activate, Set<String> correlative) {
+    public Subject(Long id, String name, Integer year, Boolean activate, Student student) {
         this.id = id;
         this.name = name;
         this.year = year;
@@ -60,5 +63,11 @@ public class Subject {
         this.activate = activate;
     }
 
+    public Student getStudent() {
+        return student;
+    }
 
+    public void setStudent(Student student) {
+        this.student = student;
+    }
 }
